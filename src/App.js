@@ -19,6 +19,12 @@ function App() {
       <Route exact path="/">
         <Homepage />
       </Route>
+      <Route path="/about">
+
+      </Route>
+      <Route path="/contact">
+
+      </Route>
       
     </Switch>
     </div>
