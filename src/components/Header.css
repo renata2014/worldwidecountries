@@ -5,6 +5,7 @@
     left: 0;
     right: 0;
     transition: all .3s ease-in-out;
+    opacity: 80%;
 }
 
 .nav .container{
@@ -26,15 +27,14 @@ input{
 
 .search{
     align-items: center;
+    position: relative;
 }
 .loupe-button{
     width: 30px;
     height: 100%;
     align-items: center;
-    align-content: center;
-padding: 0;
-margin: 0;
 
+position: absolute;
 }
 .loupe{
     width: 18px;
@@ -72,6 +72,6 @@ margin: 0;
 }
 
 .nav a.current, .nav a:hover{
-    color: #c0392b;
+    color: #7EA2AA;
     font-weight: bold;
 }

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap'); */
 
 * {
     box-sizing: border-box;
@@ -14,6 +14,9 @@ img{
     border-radius: 10px;
     overflow: hidden;
     width: 350px;
+    cursor: pointer;
+    margin: 40px;
+   
 }
 
 .card-header{
@@ -36,14 +39,11 @@ img{
     margin: 0;
 }
 
-.card-excerpt{
-    color: #777;
-    margin: 10px 0 20px;
+
+.card-text{
+    text-decoration: none;
 }
 
-.author{
-    display: flex;
-}
 
 .profile-img{
     border-radius: 50%;
@@ -52,44 +52,8 @@ img{
     width: 40px;
 }
 
-.author-info{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    margin-left: 10px;
-    width: 100px;
+a{
+    text-decoration: none;
+    color: black;
 }
 
-.author-info small{
-    color: #aaa;
-    margin-top: 5px;
-}
-
-.animated-bg {
-    background-image: linear-gradient(
-        to right, 
-        #f6f7f8 0%, 
-        #edeef1 10%, 
-        #f6f7f8 20%, 
-        #f6f7f8 100% );
-    background-size: 200% 100%;
-    animation: bgPos 1s linear infinite;
-}
-
-.animated-bg-text{
-    border-radius: 50px;
-    display: inline-block;
-    margin: 0;
-    height: 10px;
-    width: 100%;
-}
-
-@keyframes bgPos{
-    0%{
-        background-position: 50% 0;
-    }
-
-    100%{
-        background-position: -150% 0;
-    }
-}
