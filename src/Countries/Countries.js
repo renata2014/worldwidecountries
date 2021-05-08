@@ -1,14 +1,13 @@
 import React from 'react';
 import CountryCard from '../components/CountryCard';
 
-export class RegionPage extends React.Component{
+export class Countries extends React.Component{
     state={
-       countriesData: [],
-       Region: ""
+       countriesData: []
     }
 
-    handleGetAllCountries = (region) => {
-        fetch(`https://restcountries.eu/rest/v2/region/${region}`)
+    handleGetAllCountries = () => {
+        fetch("https://restcountries.eu/rest/v2/all")
         .then((response) => response.json())
         .then((json) => {
 
@@ -21,17 +20,15 @@ export class RegionPage extends React.Component{
     }
 
     componentDidMount(){
-        
-        const[search, region] = this.props.location.search.split("=");
-        this.setState({Region: region})
-        this.handleGetAllCountries(region);
+       
+        this.handleGetAllCountries();
         window.scrollTo(0,0);
     }
    
    
     render(){
         return(
-            <div className="region-page-content" style={{marginTop: '150px'}}>
+            <div className="countries-page-content" style={{marginTop: '150px'}}>
                 <h1>{this.state.Region}</h1>
 
             <div className="country-card-container" style={{display: 'flex', flexWrap: 'wrap'}}>

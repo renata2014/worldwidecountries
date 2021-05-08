@@ -1,0 +1,13 @@
+.country-detail-main{
+    margin-top: 120px;
+    }
+
+.country-detail-main img{
+    width: 450px;
+    border-radius: 5px;
+}
+
+.country-detail-main h1, h4{
+    color:  #061826;
+} 
+

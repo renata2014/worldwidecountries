@@ -9,6 +9,9 @@ import { Homepage } from './Homepage/Home';
 import { Header } from './components/Header';
 import { RegionPage } from './RegionPage/RegionPage';
 import { CountryDetails } from './singlecountrypage/CountryDetails';
+import { About } from './aboutpage/About';
+import { Countries } from './Countries/Countries';
+import { SearchPage } from './SearchPage/SearchPage';
 
 function App() {
   return (
@@ -20,9 +23,13 @@ function App() {
         <Homepage />
       </Route>
       <Route path="/about">
-
+        <About />
       </Route>
-      <Route path="/contact">
+      <Route path="/countries">
+        <Countries />
+      </Route>
+      <Route path="/searchpage">
+        <SearchPage />
       </Route>
       
     <Route component={RegionPage} path="/RegionPage"/>

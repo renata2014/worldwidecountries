@@ -1,27 +1,26 @@
-
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: #222;
     padding-bottom: 50px;
-    background-color: #F6F4F3;
 }
 
-.region-title{
+.countries-page-content{
+    padding-top: 300px;
+}
+
+.country-card-title{
     padding: 15px;
     text-decoration: none;
 }
 
-.container{
-    max-width: 1200px;
-    margin: 0 auto;
-   
-}
 
-.region-cards{
+.country-card-container{
     display: flex;
   flex-wrap: wrap;
 }
-.picture{
+
+
+.country-card-picture{
     background-image: url('https://images.unsplash.com/photo-1593180365827-a8f16fe44ee2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80');
     background-repeat: no-repeat;
     background-size: cover;

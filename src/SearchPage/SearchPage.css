@@ -1,0 +1,28 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222;
+    padding-bottom: 50px;
+}
+
+.countries-page-content{
+    padding-top: 300px;
+}
+
+.country-card-title{
+    padding: 15px;
+    text-decoration: none;
+}
+
+
+.country-card-container{
+    display: flex;
+  flex-wrap: wrap;
+}
+
+.input-container{
+    display: flex;
+    margin: 5px;
+}
+
+
+
