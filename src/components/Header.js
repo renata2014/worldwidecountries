@@ -1,9 +1,24 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import './Header.css';
 import loupe from '../loupe.svg';
 
-export class Header extends React.Component{
+export class Header extends React.Component{    
+    state = {
+        inputValue: ""
+    }
+    updateInputValue = (event) => {
+        this.setState({
+            inputValue: event.target.value
+          });
+
+    }
+
+    handleSearch = (event) => {
+        this.updateInputValue(event);
+        localStorage.setItem("searchName", this.state.inputValue)
+    }
+
     render(){
         return(
             <div>
@@ -12,9 +27,9 @@ export class Header extends React.Component{
                 <div class="container">
                     <h1 class="logo"><a href="/">Worldwide Countries</a></h1>
                     <div className="search ">
-                    <input type="text" className="input" placeholder=" search..."/>
+                    <input onKeyDown={this.handleSearch} onKeyUp={this.updateInputValue}  type="text" className="input" placeholder=" search..."/>
                     <Link to="/searchpage">
-                    <button className="loupe-button"><img src={loupe} className="loupe" alt=""/></button>
+                    <button onClick={this.handleSearch} className="loupe-button"><img src={loupe} className="loupe" alt=""/></button>
                     </Link>
                 </div> 
                     <ul>

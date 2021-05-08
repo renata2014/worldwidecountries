@@ -28,10 +28,12 @@ function App() {
       <Route path="/countries">
         <Countries />
       </Route>
-      <Route path="/searchpage">
+      {/* <Route path="/searchpage">
         <SearchPage />
-      </Route>
+      </Route> */}
       
+    <Route component={SearchPage} path="/searchpage"/>
+
     <Route component={RegionPage} path="/RegionPage"/>
 
     <Route component={CountryDetails} path="/CountryDetails"/>

@@ -34,8 +34,7 @@ export class SearchPage extends React.Component{
         
         if (event.key === "Enter") {
             console.log(event.target.value);
-        console.log(event.target.className);
-            
+            console.log(event.target.className);
         
             fetch(`https://restcountries.eu/rest/v2/${event.target.className}/${event.target.value}`)
         .then((response) => response.json())
@@ -54,7 +53,7 @@ export class SearchPage extends React.Component{
     }
 
     componentDidMount(){
-       
+       console.log(this.props);
         this.handleGetAllCountries();
         window.scrollTo(0,0);
     }
