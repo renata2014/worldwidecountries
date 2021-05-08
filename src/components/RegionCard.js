@@ -1,11 +1,10 @@
 import React from 'react';
-import { Redirect, withRouter } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
 import './RegionCard.css';
 
 class RegionCard extends React.Component{
     
     handleOnClick = () => {
-       console.log(this.props.location) ;
         this.props.history.push(`/RegionPage?region=${this.props.CardTitle}`)
     }
 

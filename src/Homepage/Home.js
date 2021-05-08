@@ -1,7 +1,6 @@
 import React from 'react';
 import './Homepage.css';
 import  RegionCard  from "../components/RegionCard";
-import { Link } from 'react-router-dom';
 
 export class Homepage extends React.Component{
 

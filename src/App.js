@@ -7,9 +7,8 @@ import {
 } from "react-router-dom";
 import { Homepage } from './Homepage/Home';
 import { Header } from './components/Header';
-import { RegionPage } from './regionpage/RegionPage';
-
-
+import { RegionPage } from './RegionPage/RegionPage';
+import { CountryDetails } from './singlecountrypage/CountryDetails';
 
 function App() {
   return (
@@ -24,12 +23,12 @@ function App() {
 
       </Route>
       <Route path="/contact">
-
       </Route>
       
-      <Route exact path="/regionpage">
-        <RegionPage />
-      </Route>
+    <Route component={RegionPage} path="/RegionPage"/>
+
+    <Route component={CountryDetails} path="/CountryDetails"/>
+
     </Switch>
     </div>
     </Router>
