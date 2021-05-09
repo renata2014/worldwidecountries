@@ -32,15 +32,13 @@ export class CountryDetails extends React.Component{
     }
 
     getNeighbourName = (countryCode) => {
-        console.log(countryCode);
         fetch(`https://restcountries.eu/rest/v2/alpha/${countryCode}`)
         .then((response) => response.json())
         .then((json) => {
             this.setState({neighbourName: json.name})
+
         }).catch(function() {
         });
-        
-        
     }
 
     componentDidMount(){
@@ -60,16 +58,17 @@ export class CountryDetails extends React.Component{
                 <h4>Region - {this.state.CountryData.region}</h4>
                 <h4>Population - {this.state.CountryData.population}</h4>
                 <h4 className="arrangement">Language/s - {this.state.languages.map((lang, index) =>(
-                     <h5 key={index}>{lang.name}:
-                     <span key={index}>  {lang.nativeName}</span>
+                    <span>  <h5 key={index}>{lang.name}:
+                     <p key={index}>  {lang.nativeName}</p>
                      </h5>
+                     </span>
                      ))}</h4>
-                <h4>Neighbours - {this.state.borders.map((neighbour, index) =>(
-                    <Link to={`/CountryDetails?countryCode=${neighbour}`} > 
-                     <h5  key={index} >{neighbour}
+                <h4>Neighbours: {this.state.borders.map((neighbour, index) =>(
+                     <Link to={`/CountryDetails?countryCode=${neighbour}`} > 
+                     <h5  key={index}>{neighbour}
                      {/* <span key={index}>  {lang.nativeName}</span> */}
                      </h5>
-                     </Link>
+                      </Link>
                      ))}</h4>
                 <h4>Coordinates: 
                     <h6>Latitude: {this.state.lat}</h6> 
@@ -79,7 +78,7 @@ export class CountryDetails extends React.Component{
                  <h4>Timezone - {this.state.CountryData.timezones}</h4>
                  <h4>Current time - {this.state.CountryData.currenttime}</h4>
                  
-                 <h4>Currency - {this.state.currencies.map((curr, index) =>(
+                 <h4>Currency: {this.state.currencies.map((curr, index) =>(
                      <h5 key={index} >{curr.name}:
                      <span key={index}>  {curr.symbol}</span>
                      </h5>
