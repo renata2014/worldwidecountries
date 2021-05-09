@@ -14,7 +14,6 @@ export class RegionPage extends React.Component{
 
             this.setState({countriesData: json});
 
-            console.log(this.state.countriesData);
         }).catch(function() {
             window.location.reload()
         });
@@ -23,6 +22,7 @@ export class RegionPage extends React.Component{
     componentDidMount(){
         
         const[search, region] = this.props.location.search.split("=");
+        console.log(search);
         this.setState({Region: region})
         this.handleGetAllCountries(region);
         window.scrollTo(0,0);
